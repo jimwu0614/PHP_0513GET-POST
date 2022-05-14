@@ -1,19 +1,15 @@
 <?php
-
-print_r($_GET);
-echo "<br>";
-
-
 $height=$_GET ['height'];
 $weight=$_GET ['weight'];
 
+$bmi=round($weight/(($height/100)*($height/100)) , 1);
 
 $result = '';
 switch($bmi){
     case $bmi < 18.5;
     $result = "體重過輕";
     break;
-    case $bmi >18.5 && $bmi<24;
+    case $bmi >=18.5 && $bmi<24;
     $result = "體重正常";
     break;
     case $bmi >=24 && $bmi<27;
@@ -31,7 +27,6 @@ switch($bmi){
 }
 
 
-$bmi=round($weight/(($height/100)*($height/100)) , 1);
 header("location:result.php?bmi=$bmi&result=$result")
 
 ?>

@@ -10,14 +10,12 @@
 
 <body style="text-align: center;">
     <h1 >
-        <?php
-        $bmi = $_GET['bmi'];
-        echo "BMI為" . $bmi;
-        echo "<br>";
-        echo "判定結果為" . $_GET['result'];
-        ?>
+        BMI為:<?=$_GET['bmi'];?>
+          <!-- 等同於<?php echo $_GET['bmi']?> -->
     </h1>
-
+    <h1>
+        判定結果為:<?=$_GET['result'];?>
+    </h1>
     <a href="./BMI.html">
         <button>
             回上一頁
