@@ -13,33 +13,11 @@
         <?php
         $bmi = $_GET['bmi'];
         echo "BMI為" . $bmi;
+        echo "<br>";
+        echo "判定結果為" . $_GET['result'];
         ?>
     </h1>
-    <div>
-        <?php
-        // $result = $bmi;
-        switch($bmi){
-            case $bmi < 18.5;
-            echo "體重過輕";
-            break;
-            case $bmi >18.5 && $bmi<24;
-            echo "體重正常";
-            break;
-            case $bmi >=24 && $bmi<27;
-            echo "體重過重";
-            break;
-            case $bmi >=27 && $bmi<30;
-            echo "輕度肥胖";
-            break;
-            case $bmi >=30 && $bmi<35;
-            echo "中度肥胖";
-            break;
-            default;
-            echo "重度肥胖";
-            break;
-        }
-        ?>
-    </div>
+
     <a href="./BMI.html">
         <button>
             回上一頁
