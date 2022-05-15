@@ -1,6 +1,11 @@
 <?php
-$height=$_GET ['height'];
-$weight=$_GET ['weight'];
+if(empty($_GET)){
+    $height=$_POST ['height'];
+    $weight=$_POST ['weight'];
+}else{
+    $height=$_GET ['height'];
+    $weight=$_GET ['weight'];
+}
 
 $bmi=round($weight/(($height/100)*($height/100)) , 1);
 
